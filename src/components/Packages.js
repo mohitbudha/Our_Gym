@@ -7,7 +7,7 @@ const Packages = () => {
   const plans = [
     {
       title: "Basic",
-      price: "Rs 999 / महिना",
+      price: "Rs 999 / Month",
       features: ["Yoga class", "Cardio access", "1 trainer session"],
     },
     {
