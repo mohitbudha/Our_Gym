@@ -14,7 +14,7 @@ const About = () => {
         </div>
 
         {/* Text Content */}
-        <div className="w-full md:w-1/2 mt-6 md:mt-0">
+        <div className="w-full md:w-1/2 mt-6 md:mt-0 ">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
             ABOUT US
           </h2>
@@ -27,11 +27,11 @@ const About = () => {
           </p>
         </div>
        </div>
-         <div className="overflow-x-auto">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 mt-4 text-black">
+         <div className="overflow-x-auto mx-16">
+            <h2 className="text-2xl md:text-4xl font-bold mb-2 mt-6 text-black">
             Time Table Of Session
           </h2>
-          <table className="w-full border border-gray-300 bg-white shadow-md rounded-lg mt-8 overflow-hidden">
+          <table className="w-full border border-gray-300 bg-white shadow-md rounded-lg mt-4 overflow-hidden">
            <thead className="bg-red-300 text-white">
               <tr>
                 <th className="py-3 px-4 text-left">Day</th>
