@@ -36,11 +36,12 @@ const Top = () => {
       {menuOpen && (
         <div className="md:hidden px-4 pb-4">
           <ul className="flex flex-col gap-4">
-            <li><NavLink to="/" className={linkClass} onClick={toggleMenu}>होम</NavLink></li>
-            <li><NavLink to="/about" className={linkClass} onClick={toggleMenu}>हाम्रो बारेमा</NavLink></li>
-            <li><NavLink to="/packages" className={linkClass} onClick={toggleMenu}>प्याकेजहरू</NavLink></li>
-            <li><NavLink to="/trainers" className={linkClass} onClick={toggleMenu}>ट्रेनरहरू</NavLink></li>
-            <li><NavLink to="/contact" className={linkClass} onClick={toggleMenu}>सम्पर्क</NavLink></li>
+            <li><NavLink to="/" className={linkClass} onClick={toggleMenu}>Home</NavLink></li>
+            <li><NavLink to="/about" className={linkClass} onClick={toggleMenu}>About Us</NavLink></li>
+            <li><NavLink to="/packages" className={linkClass} onClick={toggleMenu}>Packages</NavLink></li>
+            <li><NavLink to="/trainers" className={linkClass} onClick={toggleMenu}>Trainers</NavLink></li>
+            <li><NavLink to="/equipments" className={linkClass} onClick={toggleMenu}>Equipments</NavLink></li>
+            <li><NavLink to="/contact" className={linkClass} onClick={toggleMenu}>Contact</NavLink></li>
           </ul>
         </div>
       )}
