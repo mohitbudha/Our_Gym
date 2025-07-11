@@ -1,0 +1,30 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+
+const HeroSection = () => {
+  return (
+    <div
+      className="h-[80vh] md:h-[90vh] bg-cover bg-center flex items-center justify-center text-white text-center px-4"
+      style={{
+        backgroundImage:
+          "url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1740&q=80')",
+      }}
+    >
+      <div className="bg-black bg-opacity-60 p-6 md:p-12 rounded-lg max-w-xl">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          YOUR BODY, YOUR TEMPLE
+        </h1>
+        <p className="text-base md:text-xl mb-6">
+          Start your fitness journey today with our experienced trainers!
+        </p>
+        <NavLink to="/packages">
+          <button className="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full text-white font-semibold shadow-md transition-all">
+            Join Now
+          </button>
+        </NavLink>
+      </div>
+    </div>
+  );
+};
+
+export default HeroSection;
