@@ -26,7 +26,59 @@ const About = () => {
             The fitness journey isn't easy, but we're with for every sweat, every workout, and every progress.
           </p>
         </div>
-      </div>
+       </div>
+         <div className="overflow-x-auto">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 mt-4 text-black">
+            Time Table Of Session
+          </h2>
+          <table className="w-full border border-gray-300 bg-white shadow-md rounded-lg mt-8 overflow-hidden">
+           <thead className="bg-red-300 text-white">
+              <tr>
+                <th className="py-3 px-4 text-left">Day</th>
+                <th className="py-3 px-4 text-left">Time</th>
+                <th className="py-3 px-4 text-left">Session</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700">
+              <tr className="border-b">
+                <td className="py-3 px-4">Sunday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">Cardio + Strength</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-3 px-4">Monday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">Cardio + Strength</td>
+              </tr>
+              <tr className="border-b bg-gray-50">
+                <td className="py-3 px-4">Tuesday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">Weight Training</td>
+              </tr>
+              <tr className="border-b">
+                <td className="py-3 px-4">Wednesday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">Zumba + Core</td>
+              </tr>
+              <tr className="border-b bg-gray-50">
+                <td className="py-3 px-4">Thrusday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">CrossFit</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4">Friday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">Yoga & Flexibility</td>
+              </tr>
+              <tr>
+                <td className="py-3 px-4">Saturday</td>
+                <td className="py-3 px-4">6:00AM - 8:00AM</td>
+                <td className="py-3 px-4">Yoga & Flexibility</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
     </section>
   );
 };
