@@ -6,7 +6,7 @@ const JoinForm = ({ planName, onClose }) => {
       <div className="bg-white rounded-lg p-6 sm:p-8 w-[90%] sm:w-[400px]">
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-black text-xl font-bold hover:text-red-600"
+          className="absolute  right-0 text-black text-xl font-bold hover:text-red-600"
         >
           ✕
         </button>
