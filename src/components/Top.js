@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
+
 const Top = () => {
+  const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileEquipmentsOpen, setMobileEquipmentsOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   const linkClass = ({ isActive }) =>
@@ -20,27 +23,73 @@ const Top = () => {
         <ul className="hidden md:flex gap-6 items-center">
           <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
           <li><NavLink to="/about" className={linkClass}>About Us</NavLink></li>
-          <li><NavLink to="/packages" className={linkClass}>Packages</NavLink></li>
+          <li><NavLink to="/services" className={linkClass}>Programs</NavLink></li>
           <li><NavLink to="/trainers" className={linkClass}>Trainers</NavLink></li>
-          <li><NavLink to="/equipments" className={linkClass}>Equipments</NavLink></li>
-          <li><NavLink to="/contact" className={linkClass}>Contact</NavLink></li>
+          <li><NavLink to="/packages" className={linkClass}>Packages</NavLink></li> 
+        <li
+          className="relative"
+          onMouseEnter={() => setProgramsDropdownOpen(true)}
+          onMouseLeave={() => setProgramsDropdownOpen(false)}
+        >
+          <NavLink to="#">
+            Equipments
+          </NavLink>
+          {programsDropdownOpen && (
+            <ul className="absolute left-0 top-full bg-white text-black shadow-lg p-2 rounded-lg w-48 z-50">
+              <li className="hover:bg-pink-500 hover:text-white p-2 rounded">
+                <NavLink to="/equipments">Our Equipments</NavLink>
+              </li>
+              <li className="hover:bg-pink-500 hover:text-white p-2 rounded">
+                <NavLink to="/forSell">For Sell</NavLink>
+              </li>
+            </ul>
+          )}
+        </li>
+        <li><NavLink to="/contact" className={linkClass}>Contact</NavLink></li>
+        <li><NavLink to="/dropdown" className={linkClass}>Dropdown</NavLink></li>
+
         </ul>
-
-        {/* Hamburger Icon */}
-        <button className="md:hidden text-2xl" onClick={toggleMenu}>
-          {menuOpen ? <FaTimes /> : <FaBars />}
+      
+      {/* Mobile Menu Icon */}
+      <button className="md:hidden text-2xl" onClick={toggleMenu}>
+          {menuOpen? <FaTimes/> : <FaBars/>}
         </button>
-      </div>
+       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
+     {/* Mobile Menu */}
+     {menuOpen && (
         <div className="md:hidden px-4 pb-4">
           <ul className="flex flex-col gap-4">
             <li><NavLink to="/" className={linkClass} onClick={toggleMenu}>Home</NavLink></li>
             <li><NavLink to="/about" className={linkClass} onClick={toggleMenu}>About Us</NavLink></li>
-            <li><NavLink to="/packages" className={linkClass} onClick={toggleMenu}>Packages</NavLink></li>
+            <li><NavLink to="/services" className={linkClass}>Programs</NavLink></li>
             <li><NavLink to="/trainers" className={linkClass} onClick={toggleMenu}>Trainers</NavLink></li>
-            <li><NavLink to="/equipments" className={linkClass} onClick={toggleMenu}>Equipments</NavLink></li>
+            <li><NavLink to="/packages" className={linkClass} onClick={toggleMenu}>Packages</NavLink></li>
+            <li>
+              <button
+                className="flex items-center w-full focus:outline-none"
+                onClick={() => setMobileEquipmentsOpen((open) => !open)}
+                type="button"
+              >
+                <span className={linkClass({ isActive: false }) + ' w-full text-left'}>
+                  Equipments
+                </span>
+                <svg className={"ml-2 w-4 h-4 transform transition-transform " + (mobileEquipmentsOpen ? "rotate-180" : "")}
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {mobileEquipmentsOpen && (
+                <ul className="ml-4 mt-2 flex flex-col gap-2">
+                  <li>
+                    <NavLink to="/equipments" className={linkClass} onClick={() => { setMobileEquipmentsOpen(false); toggleMenu(); }}>Our Equipments</NavLink>
+                  </li>
+                  <li>
+                    <NavLink to="/forSell" className={linkClass} onClick={() => { setMobileEquipmentsOpen(false); toggleMenu(); }}>For Sell</NavLink>
+                  </li>
+                </ul>
+              )}
+            </li>
             <li><NavLink to="/contact" className={linkClass} onClick={toggleMenu}>Contact</NavLink></li>
           </ul>
         </div>

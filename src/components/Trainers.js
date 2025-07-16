@@ -4,23 +4,39 @@ const Trainers = () => {
   const trainers = [
     {
       name: "Raju ",
-      specialty: "bodybuilding instrutor",
+      specialty: "Fitness coach",
+      contact:"9876543210",
       img: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       name: "Sunita",
       specialty: "Yoga instructor",
+      contact:"9876543200",
       img: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       name: "Bikash",
-      specialty: "Fitness coach",
-      img: "https://randomuser.me/api/portraits/men/55.jpg",
+      specialty: "bodybuilding instrutor",
+      contact:"9876543201",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-n6PftoUXbhlp8lrsJHg4B6-XAbHw2Ej1mg&s",
     },
     {
       name: "Gita",
       specialty: "Dieting consultant",
-      img: "https://randomuser.me/api/portraits/women/44.jpg",
+      contact:"9876543202",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhf1G2sMa3qTArwak5N7bUqHJt9wsvBaHGYg&s",
+    },
+    {
+      name: "Sita",
+      specialty: "Cardio Access",
+      contact:"9876543203",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZCh95uGtOd7MLF_9bj4dYCgIvY_HYYnVzw&s",
+    },
+    {
+      name: "Rita",
+      specialty: "Zumba",
+      contact:"9876543204",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPL_cmNA9LYCEWUfYXb9ntlkz37nyBoAlEhQ&s",
     },
   ];
 
@@ -40,6 +56,7 @@ const Trainers = () => {
             />
             <h3 className="text-xl font-bold text-gray-800">{trainer.name}</h3>
             <p className="text-red-500">{trainer.specialty}</p>
+            <p className="text-black-500">{trainer.contact}</p>
           </div>
         ))}
       </div>

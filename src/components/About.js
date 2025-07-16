@@ -1,4 +1,5 @@
 import React from 'react';
+import Caro from './caro';
 
 const About = () => {
   return (
@@ -6,11 +7,8 @@ const About = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
         {/* Image */}
         <div className="w-full md:w-1/2">
-          <img
-            src="https://media.istockphoto.com/id/610431768/photo/fitness-club-in-luxury-hotel-interior.jpg?s=612x612&w=0&k=20&c=IkusSsZFq1kauP2FhSSw0Jmx92WuSSvlksesEZGw0ik="
-            alt="About us"
-            className="rounded-lg shadow-lg"
-          />
+        <Caro/>
+         
         </div>
 
         {/* Text Content */}
@@ -27,56 +25,96 @@ const About = () => {
           </p>
         </div>
        </div>
-         <div className="overflow-x-auto mx-16">
+         <div className="overflow-x-auto mx-12">
             <h2 className="text-2xl md:text-4xl font-bold mb-2 mt-6 text-black">
             Time Table Of Session
           </h2>
-          <table className="w-full border border-gray-300 bg-white shadow-md rounded-lg mt-4 overflow-hidden">
-           <thead className="bg-red-300 text-white">
-              <tr>
-                <th className="py-3 px-4 text-left">Day</th>
-                <th className="py-3 px-4 text-left">Time</th>
-                <th className="py-3 px-4 text-left">Session</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-700">
-              <tr className="border-b">
-                <td className="py-3 px-4">Sunday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">Cardio + Strength</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-3 px-4">Monday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">Cardio + Strength</td>
-              </tr>
-              <tr className="border-b bg-gray-50">
-                <td className="py-3 px-4">Tuesday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">Weight Training</td>
-              </tr>
-              <tr className="border-b">
-                <td className="py-3 px-4">Wednesday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">Zumba + Core</td>
-              </tr>
-              <tr className="border-b bg-gray-50">
-                <td className="py-3 px-4">Thrusday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">CrossFit</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4">Friday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">Yoga & Flexibility</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4">Saturday</td>
-                <td className="py-3 px-4">6:00AM - 8:00AM</td>
-                <td className="py-3 px-4">Yoga & Flexibility</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="overflow-x-auto p-4">
+          <table className="min-w-[700px] table-auto border border-collapse border-gray-500 text-center">
+        <thead>
+          <tr className="bg-gray-500">
+            <th className="border border-gray-500 px-4 py-2" colSpan="7">
+              Time & Programs
+            </th>
+          </tr>
+          <tr className="bg-gray-400">
+            <th className="border border-gray-500 px-4 py-2">Day</th>
+            <th className="border border-gray-500 px-4 py-2">6:00 AM-8:00 AM</th>
+            <th className="border border-gray-500 px-4 py-2">8:00 AM-10:00 AM</th>
+            <th className="border border-gray-500 px-4 py-2">10:00 AM-12:00 PM</th>
+            <th className="border border-gray-500 px-4 py-2">12:00 PM-2:00 PM</th>
+            <th className="border border-gray-500 px-4 py-2">2:00 PM-4:00 PM</th>
+            <th className="border border-gray-500 px-4 py-2">4:00 PM-6:00 PM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Sunday</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+            <td className="border border-gray-500 px-4 py-2">HIIT</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">Zumba</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Monday</td>
+            <td className="border border-gray-500 px-4 py-2">HIIT</td>
+            <td className="border border-gray-500 px-4 py-2"> Zumba</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Tuesday</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+            <td className="border border-gray-500 px-4 py-2">Zumba</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">HIIT</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Wednesday</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">HIIT</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+            <td className="border border-gray-500 px-4 py-2">Zumba</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Thrusday</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+            <td className="border border-gray-500 px-4 py-2">HIIT</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">Zumba</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Friday</td>
+            <td className="border border-gray-500 px-4 py-2"> HIIT</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+            <td className="border border-gray-500 px-4 py-2">Zumba</td>
+          </tr>
+          <tr>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Saturday</td>
+            <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
+            <td className="border border-gray-500 px-4 py-2">Body Balance</td>
+            <td className="border border-gray-500 px-4 py-2">HIIT</td>
+            <td className="border border-gray-500 px-4 py-2">Group class</td>
+            <td className="border border-gray-500 px-4 py-2">Zumba</td>
+            <td className="border border-gray-500 px-4 py-2">Strength Training</td>
+          </tr>
+          {/* Add more rows for other days */}
+        </tbody>
+      </table>
+    </div>
         </div>
       
     </section>
