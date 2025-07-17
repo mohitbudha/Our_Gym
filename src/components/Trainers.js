@@ -41,8 +41,8 @@ const Trainers = () => {
   ];
 
   return (
-    <section id="trainers" className="py-16 px-6 bg-white text-center select-none caret-transparent">
-      <h2 className="text-4xl font-bold mb-10 text-black">OUR TRAINERS</h2>
+    <section id="trainers" className="py-16 px-6 bg-inherit text-inherit text-center select-none caret-transparent">
+      <h2 className="text-4xl font-bold mb-10 text-inherit">OUR TRAINERS</h2>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         {trainers.map((trainer, i) => (
           <div
@@ -56,7 +56,7 @@ const Trainers = () => {
             />
             <h3 className="text-xl font-bold text-gray-800">{trainer.name}</h3>
             <p className="text-red-500">{trainer.specialty}</p>
-            <p className="text-black-500">{trainer.contact}</p>
+            <p className="text-black">{trainer.contact}</p>
           </div>
         ))}
       </div>

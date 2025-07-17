@@ -3,7 +3,7 @@ import Caro from './caro';
 
 const About = () => {
   return (
-    <section id="about" className="py-16 px-6 bg-white select-none caret-transparent">
+    <section id="about" className="py-16 px-6 bg-inherit text-inherit select-none caret-transparent">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
         {/* Image */}
         <div className="w-full md:w-1/2">
@@ -13,7 +13,7 @@ const About = () => {
 
         {/* Text Content */}
         <div className="w-full md:w-1/2 mt-6 md:mt-0 ">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-inherit">
             ABOUT US
           </h2>
           <p className="text-gray-700 text-lg mb-4 leading-relaxed">
@@ -49,7 +49,7 @@ const About = () => {
         </thead>
         <tbody>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Sunday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Sunday</td>
             <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
             <td className="border border-gray-500 px-4 py-2">Body Balance</td>
             <td className="border border-gray-500 px-4 py-2">HIIT</td>
@@ -58,7 +58,7 @@ const About = () => {
             <td className="border border-gray-500 px-4 py-2">Strength Training</td>
           </tr>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Monday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Monday</td>
             <td className="border border-gray-500 px-4 py-2">HIIT</td>
             <td className="border border-gray-500 px-4 py-2"> Zumba</td>
             <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
@@ -67,7 +67,7 @@ const About = () => {
             <td className="border border-gray-500 px-4 py-2">Strength Training</td>
           </tr>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Tuesday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Tuesday</td>
             <td className="border border-gray-500 px-4 py-2">Strength Training</td>
             <td className="border border-gray-500 px-4 py-2">Body Balance</td>
             <td className="border border-gray-500 px-4 py-2">Zumba</td>
@@ -76,7 +76,7 @@ const About = () => {
             <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
           </tr>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Wednesday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Wednesday</td>
             <td className="border border-gray-500 px-4 py-2">Group class</td>
             <td className="border border-gray-500 px-4 py-2">HIIT</td>
             <td className="border border-gray-500 px-4 py-2">Body Balance</td>
@@ -85,7 +85,7 @@ const About = () => {
             <td className="border border-gray-500 px-4 py-2">Strength Training</td>
           </tr>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Thrusday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Thrusday</td>
             <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
             <td className="border border-gray-500 px-4 py-2">Strength Training</td>
             <td className="border border-gray-500 px-4 py-2">HIIT</td>
@@ -94,7 +94,7 @@ const About = () => {
             <td className="border border-gray-500 px-4 py-2">Body Balance</td>
           </tr>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Friday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Friday</td>
             <td className="border border-gray-500 px-4 py-2"> HIIT</td>
             <td className="border border-gray-500 px-4 py-2">Body Balance</td>
             <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
@@ -103,7 +103,7 @@ const About = () => {
             <td className="border border-gray-500 px-4 py-2">Zumba</td>
           </tr>
           <tr>
-            <td className="border border-gray-500 px-4 py-2 bg-gray-100 font-bold">Saturday</td>
+            <td className="border border-gray-500 px-4 py-2 bg-gray-400 font-bold">Saturday</td>
             <td className="border border-gray-500 px-4 py-2">Weight Loss</td>
             <td className="border border-gray-500 px-4 py-2">Body Balance</td>
             <td className="border border-gray-500 px-4 py-2">HIIT</td>

@@ -26,11 +26,11 @@ const Equipments = () => {
   ];
 
   return (
-    <section id="equipments" className="py-16 px-6 bg-white text-center slect-none caret-transparent">
-      <h2 className="text-4xl font-bold text-black mb-10">OUR GYM EQUIPMENT</h2>
+    <section id="equipments" className="py-16 px-6 bg-inherit text-inherit text-center slect-none caret-transparent">
+      <h2 className="text-4xl font-bold text-inherit mb-10">OUR GYM EQUIPMENT</h2>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {equipmentList.map((item, index) => (
-          <div key={index} className="bg-gray-100 rounded-lg shadow-md p-4 hover:shadow-xl transition-all">
+          <div key={index} className="bg-gray-100 rounded-lg shadow-lg p-4 hover:shadow-xl transition-all">
             <img
               src={item.img}
               alt={item.name}

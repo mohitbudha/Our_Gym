@@ -19,7 +19,7 @@ const JoinForm = ({ planName, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center z-50 select-none">
+    <div className="fixed inset-0 bg-inherit text-inherit bg-opacity-60 flex justify-center items-center z-50 select-none">
       <div className="bg-white rounded-lg p-6 sm:p-8 w-[90%] sm:w-[400px]">
         <button
           onClick={onClose}

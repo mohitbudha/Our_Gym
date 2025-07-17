@@ -10,6 +10,7 @@ import Equipments from './components/Equipments'
 import ForSell from './components/ForSell';
 import Services from './components/Services';
 import Dropdown from './components/Dropdown';
+import { ThemeProvider } from './ThemeContex';
 
 const route = createBrowserRouter([{
   path:'/',
@@ -30,9 +31,10 @@ const route = createBrowserRouter([{
 const App = () => {
    
   return (
-      <div >
+        <ThemeProvider>
       <RouterProvider router={route}/>
-    </div>
+      </ThemeProvider>
+    
   )
 }
 

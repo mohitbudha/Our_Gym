@@ -5,7 +5,7 @@ const Footer = () => {
   const linkClass = "hover:text-red-400";
 
   return (
-    <footer className="bg-black text-white py-8 px-6 ">
+    <footer className="bg-gray-700 text-gray-200 py-8 px-6 ">
       <div className="flex flex-col md:flex-row justify-between gap-12 px-4 text-sm select-none caret-transparent">
         <div className="flex flex-col md:flex-row items-start gap-16">
           {/* Logo or name */}

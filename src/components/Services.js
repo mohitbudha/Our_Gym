@@ -38,11 +38,11 @@ const Services = () => {
   const [fullscreenService, setFullscreenService] = useState(null);
 
   return (
-    <section id="services" className="py-16 px-6 bg-gray-50 text-center select-none caret-transparent">
-      <h2 className="text-4xl font-bold text-black mb-10">Our Programs</h2>
+    <section id="services" className="py-16 px-6 bg-inherit text-inherit  text-center select-none caret-transparent">
+      <h2 className="text-4xl font-bold text-inherit mb-10">Our Programs</h2>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {services.map((service, idx) => (
-          <div key={idx} className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all flex flex-col items-center">
+          <div key={idx} className="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-xl transition-all flex flex-col items-center">
             {typeof service.img === 'string' && service.img.startsWith('http') ? (
               <img src={service.img} alt={service.name} className="w-24 h-24 object-cover rounded mb-4" />
             ) : (

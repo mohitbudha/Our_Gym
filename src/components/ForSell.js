@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const ForSell = () => {
   const equipmentList = [
@@ -118,30 +119,42 @@ const ForSell = () => {
   };
 
   return (
-    <section id="equipments" className="py-16 px-6 bg-white text-center caret-transparent relative">
+    <div id="equipments" className="py-0 px-0 bg-inherit text-inherit text-center caret-transparent relative">
+      <nav className='w-full bg-inherit fixed border border-gray-400'>
+      <ul className="flex justify-end items-center space-x-8  relative">
+  <li>
+    <NavLink to="/new" className="hover:text-red-500 hover:bold hover:underline">New</NavLink>
+  </li>
+  <li className="relative ">
+    <button onClick={toggleCart} className="relative mr-12 py-2">
+      <span role="img" aria-label="cart" className="text-2xl">🛒</span>
+      {cart.length > 0 && (
+        <span className="absolute -top-0 -right-0.5 bg-red-500 text-white text-xs px-1 py-0.5 rounded-full">
+          {cart.length}
+        </span>
+      )}
+    </button>
+  </li>
+</ul>
+
       {/* Cart Alert */}
       {cartAlert && (
-        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-2 rounded shadow-lg z-50 transition-opacity duration-500">
+        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-light-blue-500 text-white px-12 py-4 rounded shadow-lg z-50 transition-opacity duration-500">
           {cartAlert}
         </div>
       )}
       {/* Cart Icon at top right */}
       <div className="absolute right-8 top-8 z-20 mb-12">
-        <button onClick={toggleCart} className="relative">
-          <span role="img" aria-label="cart" className="text-3xl">🛒</span>
-          {cart.length > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">{cart.length}</span>
-          )}
-        </button>
+        
         {/* Cart Dropdown/Modal */}
         {showCart && (
-          <div className="absolute right-0 mt-2 w-72 bg-white border border-gray-200 shadow-lg rounded-lg p-4 z-30 text-left">
-            <h3 className="font-bold mb-2">Cart Items</h3>
+          <div className="absolute right-0 mt-2 w-72 bg-gray-200 border border-gray-700 shadow-lg rounded-lg p-4 z-30 text-left">
+            <h3 className="font-bold text-black mb-2">Cart Items</h3>
             {cart.length === 0 ? (
-              <p className="text-gray-500">Your cart is empty.</p>
+              <p className="text-gray-700">Your cart is empty.</p>
             ) : (
               <>
-                <div className="flex items-center mb-2">
+                <div className="flex items-center text-gray-800 font-bold mb-2">
                   <input
                     type="checkbox"
                     checked={selectedItems.length === cart.length && cart.length > 0}
@@ -152,7 +165,7 @@ const ForSell = () => {
                 </div>
                 <ul>
                   {cart.map((item, idx) => (
-                    <li key={idx} className="flex items-center justify-between mb-2">
+                    <li key={idx} className="flex items-center text-gray-700 justify-between mb-2">
                       <div className="flex items-center">
                         <input
                           type="checkbox"
@@ -167,7 +180,7 @@ const ForSell = () => {
                 </ul>
                 {/* Total Products and Total Price - only show when items are selected */}
                 {selectedItems.length > 0 && (
-                  <div className="border-t border-gray-200 mt-4 pt-2 flex flex-col gap-1">
+                  <div className="border-t text-gray-900 border-gray-200 mt-4 pt-2 flex flex-col gap-1">
                     <span className="text-sm font-semibold">Total Products: {selectedItems.length}</span>
                     <span className="text-sm font-semibold">
                       Total Price: Rs {selectedItems.reduce((sum, idx) => {
@@ -199,7 +212,8 @@ const ForSell = () => {
           </div>
         )}
       </div>
-
+      </nav>
+<section className='py-16 px-6'>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 mt-8">
         {equipmentList.map((item, index) => {
           const like = likes[item.name] || { liked: false, count: 0 };
@@ -245,6 +259,7 @@ const ForSell = () => {
         })}
       </div>
     </section>
+    </div>
   );
 };
 
