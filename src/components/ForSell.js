@@ -120,6 +120,11 @@ const ForSell = () => {
 
   return (
     <div id="equipments" className="py-0 px-0 bg-inherit text-inherit text-center caret-transparent relative">
+      {cartAlert && (
+        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-light-blue-500 text-white px-12 py-4 rounded shadow-lg z-50 transition-opacity duration-500">
+          {cartAlert}
+        </div>
+      )}
       <nav className='w-full bg-inherit fixed border border-gray-400'>
       <ul className="flex justify-end items-center space-x-8  relative">
   <li>
@@ -138,11 +143,7 @@ const ForSell = () => {
 </ul>
 
       {/* Cart Alert */}
-      {cartAlert && (
-        <div className="fixed top-6 left-1/2 transform -translate-x-1/2 bg-light-blue-500 text-white px-12 py-4 rounded shadow-lg z-50 transition-opacity duration-500">
-          {cartAlert}
-        </div>
-      )}
+      
       {/* Cart Icon at top right */}
       <div className="absolute right-8 top-8 z-20 mb-12">
         
