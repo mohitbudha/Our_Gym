@@ -4,7 +4,7 @@ const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState("light☀");
-
+ 
   // When theme changes, update body classes
   useEffect(() => {
     if (theme === "light☀") {
@@ -16,12 +16,14 @@ export const ThemeProvider = ({ children }) => {
     }
   }, [theme]);
 
+  
+
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light☀" ? "dark🌙" : "light☀"));
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme,  }} >
       {children}
     </ThemeContext.Provider>
   );

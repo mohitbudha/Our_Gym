@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useTheme } from '../ThemeContex';
 
 const ForSell = () => {
   const equipmentList = [
@@ -117,6 +118,15 @@ const ForSell = () => {
       }
     });
   };
+    const {theme} = useTheme();
+      const cardStyle={
+      backgroundColor: theme === "light☀" ? "#fff" : "#1e1e1e",
+      color: theme === "light☀" ? "#000" : "#fff",
+      borderRadius: "12px",
+      padding: "20px",
+      boxShadow: theme === "light☀" ? "0 4px 6px rgba(0,0,0,0.3)" : "0 4px 6px rgba(255,255,255,0.2)",
+      transition: "0.3s ease-in-out"
+    };
 
   return (
     <div id="equipments" className="py-0 px-0 bg-inherit text-inherit text-center caret-transparent relative">
@@ -149,13 +159,13 @@ const ForSell = () => {
         
         {/* Cart Dropdown/Modal */}
         {showCart && (
-          <div className="absolute right-0 mt-2 w-72 bg-gray-200 border border-gray-700 shadow-lg rounded-lg p-4 z-30 text-left">
-            <h3 className="font-bold text-black mb-2">Cart Items</h3>
+          <div style={cardStyle} className="absolute right-0 mt-2 w-72 bg-gray-200 border border-gray-700 shadow-lg rounded-lg p-4 z-30 text-left">
+            <h3 className="font-bold text-inherit mb-2">Cart Items</h3>
             {cart.length === 0 ? (
-              <p className="text-gray-700">Your cart is empty.</p>
+              <p className="text-inherit">Your cart is empty.</p>
             ) : (
               <>
-                <div className="flex items-center text-gray-800 font-bold mb-2">
+                <div className="flex items-center text-inherit font-bold mb-2">
                   <input
                     type="checkbox"
                     checked={selectedItems.length === cart.length && cart.length > 0}
@@ -166,7 +176,7 @@ const ForSell = () => {
                 </div>
                 <ul>
                   {cart.map((item, idx) => (
-                    <li key={idx} className="flex items-center text-gray-700 justify-between mb-2">
+                    <li key={idx} className="flex items-center text-inherit justify-between mb-2">
                       <div className="flex items-center">
                         <input
                           type="checkbox"
@@ -181,7 +191,7 @@ const ForSell = () => {
                 </ul>
                 {/* Total Products and Total Price - only show when items are selected */}
                 {selectedItems.length > 0 && (
-                  <div className="border-t text-gray-900 border-gray-200 mt-4 pt-2 flex flex-col gap-1">
+                  <div className="border-t text-inherit border-gray-200 mt-4 pt-2 flex flex-col gap-1">
                     <span className="text-sm font-semibold">Total Products: {selectedItems.length}</span>
                     <span className="text-sm font-semibold">
                       Total Price: Rs {selectedItems.reduce((sum, idx) => {
@@ -195,13 +205,13 @@ const ForSell = () => {
                 {selectedItems.length > 0 && (
                   <div className="flex gap-2 mt-4">
                     <button
-                      className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-full flex-1"
+                      className="bg-green-500 hover:bg-green-600 text-inherit px-3 py-1 rounded-full flex-1"
                       onClick={buySelected}
                     >
                       Buy
                     </button>
                     <button
-                      className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-full flex-1"
+                      className="bg-red-500 hover:bg-red-600 text-inherit px-3 py-1 rounded-full flex-1"
                       onClick={removeSelected}
                     >
                       Remove
@@ -219,20 +229,20 @@ const ForSell = () => {
         {equipmentList.map((item, index) => {
           const like = likes[item.name] || { liked: false, count: 0 };
           return (
-            <div key={index} className="bg-gray-100 rounded-lg shadow-md p-4 hover:shadow-xl transition-all">
+            <div key={index} style={cardStyle} className="bg-gray-100 rounded-lg shadow-md p-4 hover:shadow-xl transition-all">
               <img
                 src={item.img}
                 alt={item.name}
                 className="w-full h-48 object-cover rounded mb-4"
               />
-              <h3 className="text-xl font-bold text-gray-800 text-left">{item.name}</h3>
+              <h3 className="text-xl font-bold text-inhherit text-left">{item.name}</h3>
               <p className="text-red-600 font-semibold mb-2 text-left">{item.price}</p>
               <div className="flex items-center justify-between mb-2 gap-2">
                 <div >
-                <button className="bg-red-500 hover:bg-red-600 text-white mr-1 px-5 py-2 rounded-full">
+                <button className="bg-red-500 hover:bg-red-600 text-inherit mr-1 px-5 py-2 rounded-full">
                   Buy
                 </button>
-                <button className="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-full" onClick={() => addToCart(item)}>
+                <button className="bg-red-500 hover:bg-red-600 text-inherit px-5 py-2 rounded-full" onClick={() => addToCart(item)}>
                   Add to Cart
                 </button>
                 </div>
@@ -252,7 +262,7 @@ const ForSell = () => {
                       </svg>
                     )}
                   </button>
-                  <span className="text-gray-700 font-medium">{like.count}</span>
+                  <span className="text-inherit font-medium">{like.count}</span>
                 </div>
               </div>
             </div>

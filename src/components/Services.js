@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ServiceDetails from './ServiceDetails';
+import { useTheme } from '../ThemeContex';
 
 const services = [
   {
@@ -33,25 +34,35 @@ const services = [
     img: "https://i0.wp.com/www.strengthlog.com/wp-content/uploads/2024/02/strength-training-exercises-for-beginners-scaled.jpg?fit=2560%2C1707&ssl=1",
   },
 ];
-
+  
+ 
 const Services = () => {
   const [fullscreenService, setFullscreenService] = useState(null);
+  const {theme} = useTheme();
+    const cardStyle={
+    backgroundColor: theme === "light☀" ? "#fff" : "#1e1e1e",
+    color: theme === "light☀" ? "#000" : "#fff",
+    borderRadius: "12px",
+    padding: "20px",
+    boxShadow: theme === "light☀" ? "0 4px 6px rgba(0,0,0,0.3)" : "0 4px 6px rgba(255,255,255,0.2)",
+    transition: "0.3s ease-in-out"
+  };
 
   return (
     <section id="services" className="py-16 px-6 bg-inherit text-inherit  text-center select-none caret-transparent">
       <h2 className="text-4xl font-bold text-inherit mb-10">Our Programs</h2>
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {services.map((service, idx) => (
-          <div key={idx} className="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-xl transition-all flex flex-col items-center">
+          <div key={idx} style={cardStyle} className="bg-gray-100 rounded-lg shadow-md p-6 hover:shadow-xl transition-all flex flex-col items-center">
             {typeof service.img === 'string' && service.img.startsWith('http') ? (
-              <img src={service.img} alt={service.name} className="w-24 h-24 object-cover rounded mb-4" />
+              <img src={service.img} alt={service.name} className="w-40 h-29 object-cover rounded mb-4" />
             ) : (
               <span className="text-5xl mb-4">{service.img}</span>
             )}
-            <h3 className="text-xl font-bold text-gray-800 mb-2">{service.name}</h3>
-            <p className="text-gray-600 mb-4">{service.description.length > 70 ? service.description.slice(0, 70) + '...' : service.description}</p>
+            <h3 className="text-xl font-bold text-inherit mb-2">{service.name}</h3>
+            <p className="text-inherit mb-4">{service.description.length > 70 ? service.description.slice(0, 70) + '...' : service.description}</p>
             <button
-              className="mt-auto bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full transition-all"
+              className="mt-auto bg-blue-500 hover:bg-blue-600 text-inherit px-4 py-2 rounded-full transition-all"
               onClick={() => setFullscreenService(service)}
             >
               Read More..

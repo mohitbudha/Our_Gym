@@ -1,4 +1,5 @@
-import React from 'react';
+import { useTheme } from '../ThemeContex';
+import React, { useEffect } from 'react';
 
 const Trainers = () => {
   const trainers = [
@@ -39,6 +40,16 @@ const Trainers = () => {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPL_cmNA9LYCEWUfYXb9ntlkz37nyBoAlEhQ&s",
     },
   ];
+  const {theme} = useTheme();
+   const cardStyle={
+    backgroundColor: theme === "light☀" ? "#fff" : "#1e1e1e",
+    color: theme === "light☀" ? "#000" : "#fff",
+    borderRadius: "12px",
+    padding: "20px",
+    boxShadow: theme === "light☀" ? "0 4px 6px rgba(0,0,0,0.3)" : "0 4px 6px rgba(255,255,255,0.2)",
+    transition: "0.3s ease-in-out"
+  };
+
 
   return (
     <section id="trainers" className="py-16 px-6 bg-inherit text-inherit text-center select-none caret-transparent">
@@ -46,6 +57,7 @@ const Trainers = () => {
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
         {trainers.map((trainer, i) => (
           <div
+            style={cardStyle}
             key={i}
             className="bg-gray-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all"
           >
@@ -54,9 +66,9 @@ const Trainers = () => {
               alt={trainer.name}
               className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-red-500 object-cover"
             />
-            <h3 className="text-xl font-bold text-gray-800">{trainer.name}</h3>
+            <h3 className="text-xl font-bold text-inherit">{trainer.name}</h3>
             <p className="text-red-500">{trainer.specialty}</p>
-            <p className="text-black">{trainer.contact}</p>
+            <p className="text-inherit">{trainer.contact}</p>
           </div>
         ))}
       </div>
