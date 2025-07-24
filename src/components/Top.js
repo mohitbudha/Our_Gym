@@ -26,9 +26,6 @@ const Top = () => {
         <ul className="hidden md:flex gap-6 items-center">
           <li><NavLink to="/" className={linkClass}>Home</NavLink></li>
           <li><NavLink to="/about" className={linkClass}>About Us</NavLink></li>
-          <li><NavLink to="/services" className={linkClass}>Programs</NavLink></li>
-          <li><NavLink to="/trainers" className={linkClass}>Trainers</NavLink></li>
-          <li><NavLink to="/packages" className={linkClass}>Packages</NavLink></li> 
         <li
           className="relative"
           onMouseEnter={() => setProgramsDropdownOpen(true)}
@@ -82,6 +79,9 @@ const Top = () => {
           <ul className="flex flex-col gap-4">
             <li><NavLink to="/" className={linkClass} onClick={toggleMenu}>Home</NavLink></li>
             <li><NavLink to="/about" className={linkClass} onClick={toggleMenu}>About Us</NavLink></li>
+            <li><NavLink to="/services" className={linkClass}>Programs</NavLink></li>
+          <li><NavLink to="/trainers" className={linkClass}>Trainers</NavLink></li>
+          <li><NavLink to="/packages" className={linkClass}>Packages</NavLink></li> 
             <li>
               <button
                 className="flex items-center w-full focus:outline-none"
