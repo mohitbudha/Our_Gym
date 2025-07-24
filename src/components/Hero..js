@@ -1,9 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import About from './About';
-import Packages from './Packages';
-import Trainers from './Trainers';
-import Contact from './Contact';
 
 const HeroSection = () => {
   return (
@@ -29,10 +25,6 @@ const HeroSection = () => {
         </NavLink>
       </div>
     </div>
-    <About/>
-    <Trainers/>
-    <Packages/>
-    <Contact/>
     </div>
   );
 };

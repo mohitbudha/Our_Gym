@@ -54,7 +54,6 @@ const Top = () => {
           )}
         </li>
         <li><NavLink to="/contact" className={linkClass}>Contact</NavLink></li>
-        <li><NavLink to="/dropdown" className={linkClass}>Dropdown</NavLink></li>
         <button
         onClick={toggleTheme}
         className="px-4 py-1 rounded-full border border-gray-400 hover:scale-105 transition-all duration-300"
@@ -83,9 +82,6 @@ const Top = () => {
           <ul className="flex flex-col gap-4">
             <li><NavLink to="/" className={linkClass} onClick={toggleMenu}>Home</NavLink></li>
             <li><NavLink to="/about" className={linkClass} onClick={toggleMenu}>About Us</NavLink></li>
-            <li><NavLink to="/services" className={linkClass}>Programs</NavLink></li>
-            <li><NavLink to="/trainers" className={linkClass} onClick={toggleMenu}>Trainers</NavLink></li>
-            <li><NavLink to="/packages" className={linkClass} onClick={toggleMenu}>Packages</NavLink></li>
             <li>
               <button
                 className="flex items-center w-full focus:outline-none"

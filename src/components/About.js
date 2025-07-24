@@ -1,5 +1,8 @@
 import React from 'react';
 import Caro from './caro';
+import Packages from './Packages';
+import Services from './Services';
+import Trainers from './Trainers';
 
 const About = () => {
   return (
@@ -25,6 +28,7 @@ const About = () => {
           </p>
         </div>
        </div>
+       <Services/>
          <div className="overflow-x-auto mx-12">
             <h2 className="text-2xl md:text-4xl font-bold mb-2 mt-6 text-black">
             Time Table Of Session
@@ -116,6 +120,8 @@ const About = () => {
       </table>
     </div>
         </div>
+        <Trainers/>
+        <Packages/> 
       
     </section>
   );
